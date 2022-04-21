@@ -57,4 +57,13 @@ class User:
             return False        
 
 
-        
+    @classmethod
+    def verify_user(cls,username, password):
+        """
+        method to verify whether the user is in our user_list or not
+        """
+        verify_user = ""
+        for user in User.user_list:
+            if(user.username == username and user.password == password):
+                    verify_user == user.username
+        return verify_user  
