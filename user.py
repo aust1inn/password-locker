@@ -42,5 +42,19 @@ class User:
         """""
         User.user_list.remove(self)
 
+    def user_exists (cls,username):
+        """""
+        Checks if user exists by searching a username
+
+        Args:username
+
+        """""
+
+        for user in cls.user_list:
+            if user.username == username:
+                return True
+
+            return False        
+
 
         
