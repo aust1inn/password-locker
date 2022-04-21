@@ -32,7 +32,7 @@ class User:
 
         """""   
         for user in cls.user_list:
-            if User.username == username:
+            if user.username == username:
                 return user
 
     def delete_user (self):
