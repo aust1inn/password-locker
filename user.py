@@ -1,8 +1,3 @@
-from unicodedata import name
-
-from importlib_metadata import method_cache
-
-
 class User:
     """""
     Creates user class that will generate users instances
