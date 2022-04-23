@@ -110,7 +110,18 @@ def main():
             print('\n')
 
         elif short_code == "DC":
-            pass
+            if display_credentials():
+                print("Here is a list of all your saved credentials")
+                print('\n')
+
+                for saved_credentials in display_credentials():
+                    print(f"{saved_credentials.account} {saved_credentials.userName} .....{saved_credentials.password}")
+
+                    print('\n')
+            else:
+                print('\n')
+                print("You dont seem to have any contacts saved yet")
+                print('\n')
 
         elif short_code == "FC":
              print("Enter the account whose credentials you want to search for")
