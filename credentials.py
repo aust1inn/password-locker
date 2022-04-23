@@ -1,4 +1,3 @@
-import getpass
 import pyperclip
 import random
 import string
