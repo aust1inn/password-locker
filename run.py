@@ -116,7 +116,23 @@ def main():
             pass
 
         elif short_code == "D":
-            pass
+            print("Enter the name of the account whose credentials you want to delete")
+            account_search = input()
+            if check_credential(account_search):
+                delete_credential = find_credentials(account_search)
+                print(f"Are you sure want to delete this credentials?  {delete_credential.account} {delete_credential.userName} ")
+                response = input().lower()
+                print('/n')
+
+                if response == 'yes':
+                    delete_credential.delete_credentials()
+                    print("credentials succefully deleted")
+
+                else:
+                    print("credentials not deleted")
+
+            else:
+                print("Name of the account does not exist")   
 
         elif short_code == "EX":
             print("Thanks for using password LOCKER.. See you next time!")
