@@ -113,7 +113,18 @@ def main():
             pass
 
         elif short_code == "FC":
-            pass
+             print("Enter the account whose credentials you want to search for")
+
+             search_account = input()
+             if check_credential(search_account):
+                searched_account = find_credentials(search_account)
+                print('-' * 20)
+
+                print(f"{searched_account.userName} account username is...{searched_account.username}")
+                print(f"password.......{searched_account.password}")
+             else:
+                print("That account does not exist")
+            
 
         elif short_code == "D":
             print("Enter the name of the account whose credentials you want to delete")
