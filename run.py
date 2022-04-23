@@ -17,6 +17,7 @@ def find_user(username):
 
 def create_credentials(account,userName,password):
     new_credential = Credentials(account,userName,password)
+    return new_credential
 
 def save_credentials(credentials):
     credentials.save_credentials()
@@ -88,22 +89,25 @@ def main():
             print("."*10)
             print("Account name")
             account = input("Account name: ")
-            userName = input()
+            print("Account username")
+            
+            userName = input("username: ")
             password = ''
 
-            while True:
-                print(" TP - To type your own pasword if you already have an account:\n GP - To generate random Password")
-                password_Choice = input().lower().strip()
-                if password_Choice == 'tp':
-                    input_password = input("Enter Your Own Password\n")
-                    password = password + input_password
-                    break
-                elif password_Choice == 'gp':
-                    generated_password = generate_password()
-                    password = password + generated_password
-                    break
-                else:
-                    print("Invalid password please try again")
+            
+            print(" TP - To type your own pasword if you already have an account:\n GP - To generate random Password")
+            password_Choice = input().lower().strip()
+            if password_Choice == 'tp':
+                input_password = input("Enter Your Own Password\n")
+                password = password + input_password
+                                
+            elif password_Choice == 'gp':
+                generated_password = generate_password()
+                password = password + generated_password
+                                
+            else:
+                print("Invalid password please try again")
+
             save_credentials(create_credentials(account,userName,password))
             print('\n')
             print(f"Account Credential for: {account} - UserName: {userName} - Password:{password} created succesfully")
