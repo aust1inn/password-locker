@@ -1,3 +1,4 @@
+from ast import If
 from user import User
 from credentials import Credentials
 
@@ -108,8 +109,21 @@ def main():
             print(f"Account Credential for: {account} - UserName: {userName} - Password:{password} created succesfully")
             print('\n')
 
+        elif short_code == "DC":
+            pass
 
-        
+        elif short_code == "FC":
+            pass
+
+        elif short_code == "D":
+            pass
+
+        elif short_code == "EX":
+            print("Thanks for using password LOCKER.. See you next time!")
+            break
+        else:
+            print("We couldn't quite get you,kindly input the correct short code")
+            print('\n')
 
 if __name__ == '__main__':
 
