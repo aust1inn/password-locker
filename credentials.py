@@ -1,4 +1,7 @@
+import getpass
 import pyperclip
+import random
+import string
 
 class Credentials:
     """
@@ -53,3 +56,22 @@ class Credentials:
             if credential.account == account:
                 return True
             return False    
+
+    @classmethod
+    def copy_credentials(cls,account):
+        found_credentials = Credentials.find_credential(account)
+        pyperclip.copy(found_credentials)
+
+    def password_gen():
+        characters = string.ascii_lowercase + string.ascii_uppercase + string.digits + string.punctuation
+        size = 0
+        password = ''
+        while size <8:
+            password = password + random.choice(characters)
+            size +=1
+
+        return password
+
+    if __name__ == '__main__':
+
+        password_gen()         
