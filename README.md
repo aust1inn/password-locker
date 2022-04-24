@@ -4,7 +4,7 @@ An application that enables users to store passwords from their various sites an
 ## Setup/ running application
 To acccess this project on your local files, follow the following procedure
 
-1. Clone this repository :  `$ git clone https://github.com/ndanu-josy/Password-Locker.git
+1. Clone this repository :  https://github.com/aust1inn/password-locker.git
 1. run $chmod +x run.py onthe 
 1. then ./run.py 
 
